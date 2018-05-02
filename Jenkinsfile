@@ -9,7 +9,7 @@ pipeline {
         }
 
         node(label: 'Waterhoen') {
-          ansiblePlaybook '/home/marcwolf/tmp/nuage-metro-2.3.2build.yml'
+          ansiblePlaybook '/home/marcwolf/tmp/nuage-metro-2.3.2/build.yml'
         }
 
       }
