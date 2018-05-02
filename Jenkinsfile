@@ -1,15 +1,11 @@
 pipeline {
-  agent {
-    node {
-      label 'Waterhoen'
-    }
-
-  }
+  agent none
   stages {
-    stage('MetroBuildVSD') {
+    stage('MetroAnsible') {
       steps {
-        node(label: 'laptop') {
-          ansiblePlaybook 'vsd_predeploy.yml'
+        node(label: 'Waterhoen') {
+          sh '''date
+/usr/sbin/lspci'''
         }
 
       }
