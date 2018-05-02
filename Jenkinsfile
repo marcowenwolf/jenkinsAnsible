@@ -6,9 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('') {
+    stage('MetroBuildVSD') {
       steps {
-        node(label: 'Linux') {
+        node(label: 'laptop') {
           ansiblePlaybook 'vsd_predeploy.yml'
         }
 
