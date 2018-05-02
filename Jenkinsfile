@@ -5,7 +5,7 @@ pipeline {
       steps {
         node(label: 'Waterhoen') {
           sh '''date
-/usr/sbin/lspci'''
+/sbin/lspci'''
         }
 
       }
