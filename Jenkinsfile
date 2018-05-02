@@ -8,7 +8,10 @@ pipeline {
 /sbin/lspci'''
         }
 
-        ansiblePlaybook 'build.yml'
+        node(label: 'Waterhoen') {
+          ansiblePlaybook 'build.yml'
+        }
+
       }
     }
   }
