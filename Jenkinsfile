@@ -8,6 +8,7 @@ pipeline {
 /sbin/lspci'''
         }
 
+        ansiblePlaybook 'build.yml'
       }
     }
   }
