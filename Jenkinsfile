@@ -1,5 +1,8 @@
 pipeline {
-  agent none
+  agent any
+    triggers {
+        cron('H */4 * * 1-5')
+    }
   stages {
     stage('MetroAnsible') {
       steps {
