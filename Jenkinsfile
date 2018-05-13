@@ -1,21 +1,21 @@
 pipeline {
   agent any
-    triggers {
-        cron('H */4 * * 1-5')
-    }
   stages {
     stage('MetroAnsible') {
       steps {
-        node(label: 'Linux') {
+        node(label: 'Waterhoen') {
           sh '''date
 /sbin/lspci'''
         }
 
-        node(label: 'Linux') {
+        node(label: 'Waterhoen') {
           ansiblePlaybook '/home/marcwolf/tmp/nuage-metro-2.3.2/build.yml'
         }
 
       }
     }
+  }
+  triggers {
+    cron('H */4 * * 1-5')
   }
 }
